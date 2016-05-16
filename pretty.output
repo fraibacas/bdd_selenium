@@ -1,0 +1,193 @@
+Feature: Search for events using Zenoss UI filters # features/event_filters.feature:2
+  I wish to use filters to search for active and archived events in Zenoss
+  Background:   # features/event_filters.feature:5
+
+  Scenario Outline: Text Filters -- @1.1 Partial string search from beginning  # features/event_filters.feature:26
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Component" and "Event ID" fields are visible                      # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "tes" as filter for the "Component" field in the Zenoss UI      # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.2 Partial string search from beginning  # features/event_filters.feature:27
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Device Class" and "Event ID" fields are visible                   # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "grand" as filter for the "Device Class" field in the Zenoss UI # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.3 Partial string search from beginning  # features/event_filters.feature:28
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Device Class" and "Event ID" fields are visible                   # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "par" as filter for the "Device Class" field in the Zenoss UI   # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.4 Partial string search from beginning  # features/event_filters.feature:29
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Device Class" and "Event ID" fields are visible                   # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "chil" as filter for the "Device Class" field in the Zenoss UI  # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.5 Partial string search from beginning   # features/event_filters.feature:30
+    Given I am logged in Zenoss                                                 # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                           # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                          # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                 # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                              # features/steps/filter_steps.py:48
+    And the "Device Class" and "Event ID" fields are visible                    # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                       # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "/grand" as filter for the "Device Class" field in the Zenoss UI # None
+    Then I can see the "evt_text_filters" event                                 # None
+
+  Scenario Outline: Text Filters -- @1.6 Partial string search from beginning  # features/event_filters.feature:31
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Event Class" and "Event ID" fields are visible                    # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "grand" as filter for the "Event Class" field in the Zenoss UI  # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.7 Partial string search from beginning  # features/event_filters.feature:32
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Event Class" and "Event ID" fields are visible                    # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "par" as filter for the "Event Class" field in the Zenoss UI    # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.8 Partial string search from beginning  # features/event_filters.feature:33
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+    And the "Event Class" and "Event ID" fields are visible                    # features/steps/filter_steps.py:53
+    When I filter for the loaded "evt_text_filters" event                      # features/steps/filter_steps.py:61
+      Traceback (most recent call last):
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1456, in run
+          match.run(runner.context)
+        File "/Library/Python/2.7/site-packages/behave/model.py", line 1903, in run
+          self.func(context, *args, **kwargs)
+        File "features/steps/filter_steps.py", line 63, in step_impl
+          field = context._row[2]
+        File "/Library/Python/2.7/site-packages/behave/runner.py", line 208, in __getattr__
+          return self.__dict__[attr]
+      KeyError: '_row'
+
+    And I type "chil" as filter for the "Event Class" field in the Zenoss UI   # None
+    Then I can see the "evt_text_filters" event                                # None
+
+  Scenario Outline: Text Filters -- @1.9 Partial string search from beginning  # features/event_filters.feature:34
+    Given I am logged in Zenoss                                                # features/steps/filter_steps.py:5
+    And the indexing interval is set to "0.5" seconds                          # features/steps/filter_steps.py:10
+    And the sample events have been loaded and indexed                         # features/steps/filter_steps.py:17
+    Given I am in the "archived" events console                                # features/steps/filter_steps.py:43
+    And I click on "Configure -> Restore defaults"                             # features/steps/filter_steps.py:48
+      ABORTED: By user (KeyboardInterrupt).
+
+    And the "Event Class" and "Event ID" fields are visible                    # None
+    When I filter for the loaded "evt_text_filters" event                      # None
+    And I type "/grand" as filter for the "Event Class" field in the Zenoss UI # None
+    Then I can see the "evt_text_filters" event                                # None
+
